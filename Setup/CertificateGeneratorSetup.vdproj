@@ -1,0 +1,93 @@
+{
+    "ProductVersion" : "1.0.0",
+    "VSVersion" : "17.0",
+    "ProjectType" : "{54435603-DBB4-11D2-8724-00A0C9A8B90C}",
+    "SccProjectName" : "SAK",
+    "SccLocalPath" : "SAK",
+    "SccAuxPath" : "SAK",
+    "SccProvider" : "SAK",
+    "PostBuildEvent" : "",
+    "PreBuildEvent" : "",
+    "RunPostBuildEvent" : "OnBuildSuccess",
+    "OutputFileName" : "CertificateGenerator.msi",
+    "OutputFileFolder" : "Release",
+    "LanguageId" : "1033",
+    "PackageCode" : "{00000000-0000-0000-0000-000000000000}",
+    "Product" : {
+        "Name" : "Certificate Generator",
+        "ProductCode" : "{00000000-0000-0000-0000-000000000000}",
+        "PackageCode" : "{00000000-0000-0000-0000-000000000000}",
+        "DefaultLocation" : "[ProgramFilesFolder][Manufacturer]\\[ProductName]",
+        "Language" : "1033",
+        "Manufacturer" : "Certificate Generator",
+        "Version" : "1.0.0",
+        "UpgradeCode" : "{00000000-0000-0000-0000-000000000000}"
+    },
+    "Files" : {
+        "DefaultDestination" : "[ProgramFilesFolder][Manufacturer]\\[ProductName]",
+        "Compression" : "yes",
+        "ReadOnly" : "no",
+        "Hidden" : "no",
+        "System" : "no",
+        "Vital" : "yes",
+        "Files": [
+            {
+                "Source": "..\\bin\\Debug\\certificate-generator.exe",
+                "Destination": "[TARGETDIR]",
+                "Vital": "yes"
+            },
+            {
+                "Source": "..\\bin\\Debug\\certificate-generator.exe.config",
+                "Destination": "[TARGETDIR]",
+                "Vital": "yes"
+            },
+            {
+                "Source": "..\\bin\\Debug\\BouncyCastle.Crypto.dll",
+                "Destination": "[TARGETDIR]",
+                "Vital": "yes"
+            },
+            {
+                "Source": "..\\bin\\Debug\\LumenWorks.Framework.IO.dll",
+                "Destination": "[TARGETDIR]",
+                "Vital": "yes"
+            },
+            {
+                "Source": "..\\bin\\Debug\\cs-pdf-to-image.dll",
+                "Destination": "[TARGETDIR]",
+                "Vital": "yes"
+            },
+            {
+                "Source": "..\\bin\\Debug\\itextsharp.dll",
+                "Destination": "[TARGETDIR]",
+                "Vital": "yes"
+            }
+        ]
+    },
+    "Shortcuts": {
+        "Desktop": {
+            "Name": "Certificate Generator",
+            "Description": "Generate certificates from templates",
+            "Target": "[TARGETDIR]certificate-generator.exe",
+            "WorkingDirectory": "[TARGETDIR]"
+        },
+        "StartMenu": {
+            "Name": "Certificate Generator",
+            "Description": "Generate certificates from templates",
+            "Target": "[TARGETDIR]certificate-generator.exe",
+            "WorkingDirectory": "[TARGETDIR]"
+        }
+    },
+    "Registry": {
+        "Root": "HKLM",
+        "Key": "Software\\[Manufacturer]\\[ProductName]",
+        "Name": "InstallPath",
+        "Value": "[TARGETDIR]"
+    },
+    "Requirements": {
+        "Framework": ".NET Framework 4.7.2",
+        "WindowsVersion": "Windows 7 SP1 or later",
+        "Processor": "1 GHz or faster",
+        "Memory": "2 GB RAM",
+        "DiskSpace": "100 MB"
+    }
+}
