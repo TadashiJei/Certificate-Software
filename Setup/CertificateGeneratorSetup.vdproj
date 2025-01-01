@@ -19,7 +19,7 @@
         "PackageCode" : "{00000000-0000-0000-0000-000000000000}",
         "DefaultLocation" : "[ProgramFilesFolder][Manufacturer]\\[ProductName]",
         "Language" : "1033",
-        "Manufacturer" : "Certificate Generator",
+        "Manufacturer" : "Hacktivators",
         "Version" : "1.0.0",
         "UpgradeCode" : "{00000000-0000-0000-0000-000000000000}"
     },
